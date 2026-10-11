@@ -1,0 +1,464 @@
+
+/* ==============================
+   COLOR PALETTE
+============================== */
+
+:root {
+    --primary: #1E3A5F;
+    --accent: #527DA3;
+    --light-blue: #EAF1F7;
+    --background: #F8FAFC;
+    --text: #334155;
+    --border: #D8E2EC;
+}
+
+/* ==============================
+   GENERAL STYLING
+============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.3;
+    color: var(--primary);
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+p {
+    color: var(--text);
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+/* ==============================
+   NAVIGATION BAR
+============================== */
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+
+    padding: 25px 8%;
+    background-color: white;
+    border-bottom: 1px solid var(--border);
+}
+
+nav a {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* ==============================
+   MAIN PAGE LAYOUT
+============================== */
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* ==============================
+   INTRODUCTION SECTION
+============================== */
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+
+    min-height: 70vh;
+    padding-bottom: 60px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.intro > div {
+    flex: 1;
+}
+
+.intro h1 {
+    font-size: 44px;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.intro p {
+    font-size: 17px;
+    max-width: 550px;
+}
+
+/* Profile picture */
+
+.profile-image {
+    width: 250px;
+    height: 300px;
+
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid var(--light-blue);
+
+    box-shadow: 0 6px 20px rgba(30, 58, 95, 0.10);
+    flex-shrink: 0;
+}
+
+/* ==============================
+   PROJECTS SECTION
+============================== */
+
+#projects {
+    padding-top: 70px;
+}
+
+#projects h2 {
+    margin-bottom: 40px;
+}
+
+.project {
+    padding: 45px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.project:first-of-type {
+    padding-top: 10px;
+}
+
+.project:last-child {
+    border-bottom: none;
+}
+
+.project h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.project p {
+    font-size: 16px;
+    max-width: 800px;
+}
+
+.project strong {
+    color: var(--primary);
+}
+
+/* ==============================
+   PRESENTATION DROPDOWN
+============================== */
+
+.presentation {
+    margin-top: 25px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Clickable heading */
+
+.presentation summary {
+    padding: 18px 22px;
+    background-color: var(--light-blue);
+    color: var(--primary);
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+/* Remove default arrow */
+
+.presentation summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Custom dropdown arrow */
+
+.presentation summary::after {
+    content: "⌄";
+    font-size: 24px;
+    line-height: 1;
+}
+
+/* Arrow when opened */
+
+.presentation[open] summary::after {
+    content: "⌃";
+}
+
+/* Hover effect */
+
+.presentation summary:hover {
+    background-color: #DCE8F2;
+}
+
+/* Dropdown heading when opened */
+
+.presentation[open] summary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.presentation[open] summary:hover {
+    background-color: #294D78;
+}
+
+/* Keyboard accessibility */
+
+.presentation summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+}
+
+/* Presentation container */
+
+.presentation-content {
+    padding: 20px;
+    background-color: white;
+    border-top: 1px solid var(--border);
+}
+
+/* Embedded PDF slides */
+
+.presentation iframe {
+    display: block;
+    width: 100%;
+    height: 550px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* ==============================
+   CONTACT SECTION
+============================== */
+
+#contact {
+    text-align: center;
+    padding: 80px 0 100px;
+    border-top: 1px solid var(--border);
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+#contact p {
+    font-size: 16px;
+}
+
+#contact a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+#contact a:hover {
+    color: var(--primary);
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   TABLETS
+============================== */
+
+@media (max-width: 900px) {
+
+    main {
+        padding: 0 25px;
+    }
+
+    .intro {
+        gap: 35px;
+    }
+
+    .intro h1 {
+        font-size: 36px;
+    }
+
+    .profile-image {
+        width: 210px;
+        height: 250px;
+    }
+
+    .presentation iframe {
+        height: 450px;
+    }
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   MOBILE PHONES
+============================== */
+
+@media (max-width: 650px) {
+
+    nav {
+        justify-content: center;
+        gap: 25px;
+        padding: 20px;
+    }
+
+    main {
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 55px 0;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    /* Introduction */
+
+    .intro {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 30px;
+        min-height: auto;
+    }
+
+    .intro h1 {
+        font-size: 34px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 210px;
+    }
+
+    /* Projects */
+
+    .project {
+        padding: 35px 0;
+    }
+
+    .project h3 {
+        font-size: 22px;
+    }
+
+    .project p {
+        font-size: 15px;
+    }
+
+    /* Presentation */
+
+    .presentation summary {
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    .presentation-content {
+        padding: 10px;
+    }
+
+    .presentation iframe {
+        height: 350px;
+    }
+
+    /* Contact */
+
+    #contact {
+        padding: 60px 0;
+    }
+}
+
+/* ==============================
+   TECHNOLOGY TAGS
+============================== */
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0 25px;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 6px 14px;
+
+    background-color: var(--light-blue);
+    color: var(--primary);
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 500;
+}

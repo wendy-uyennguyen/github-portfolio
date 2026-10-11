@@ -1,10 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uyen's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hi, I'm Uyen!</h1>
-    <p>Welcome to my portfolio.</p>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <!-- INTRODUCTION -->
+        <section id="about" class="intro">
+            <div>
+                <h1>Hi, I'm Uyen Nguyen!</h1>
+                <p>B.S. Computer Science and Economics</p>
+                <p>University of Wisconsin-Madison, 2026</p>                
+                <p>Interested in data analysis, economics, and business problem-solving.</p>
+            </div>
+            
+            <img src="images/profile.jpg" alt="Uyen's Image" class="profile-image">
+        </section>
+    
+        <!-- PROJECTS -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article class="project">
+                <h3>Intelligent Pricing System</h3>
+                <p>An interactive pricing analytics platform that helps pricing teams evaluate discount requests, assess margin risks, and make data-driven pricing decisions.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Vite</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">pandas</span>
+                </div>
+
+                <details class="presentation">
+                    <summary>View Presentation</summary>
+                    <div class="presentation-content">
+                        <iframe
+                            src="slides/cs620-presentation.pdf"
+                            title="Intelligent Pricing Presentation">
+                        </iframe>
+                    </div>
+                </details>
+            </article>
+
+            <article class="project">
+                <h3>Spotify Freemium Conversion AI</h3>
+                <p>
+                    Case competition project designing an AI-driven user-segmentation 
+                    model to increase Spotify's Free-to-Premium conversion - VCC Think-A-Thon 2026
+                </p>
+
+                <details class="presentation">
+                    <summary>View Presentation</summary>
+                    <div class="presentation-content">
+                        <iframe
+                            src="slides/spotify_case_comp.pdf"
+                            title="Spotify Freemium Conversion AI Presentation">
+                        </iframe>
+                    </div>
+                </details>
+            </article>
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: 
+                <a href="mailto:wendynguyen.sa@gmail.com">
+                    wendynguyen.sa@gmail.com
+                </a>
+            </p>
+        </section>
+    </main>
 </body>
 </html>
