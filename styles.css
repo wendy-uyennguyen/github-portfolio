@@ -462,3 +462,49 @@ section {
     font-size: 14px;
     font-weight: 500;
 }
+
+/* ==============================
+   VISUAL DESIGN SECTION
+============================== */
+
+#design {
+    padding-top: 70px;
+    border-top: 1px solid var(--border);
+}
+
+#design h2 {
+    margin-bottom: 40px;
+}
+
+/* Design gallery layout */
+.design-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    align-items: start;
+}
+
+/* Posters */
+.design-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Video */
+.design-gallery video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .design-gallery {
+        grid-template-columns: 1fr;
+    }
+}
